@@ -1,0 +1,28 @@
+# Config file for https://github.com/cosmtrek/air
+# Working directory
+root = "."
+tmp_dir = "tmp"
+
+# Build
+[build]
+cmd = "go build -o ./tmp/main ."
+bin = "tmp/main"
+full_bin = "APP_ENV=dev APP_USER=air ./dist/main"
+include_ext = ["go"]
+exclude_dir = ["vendor", "tmp"]
+exclude_ext = ["md", "tpl", "swp", "tmpl", "log"]
+exclude_regex = ["_test\\.go"]
+
+# Interval to wait before starting the build after any file changes
+# (in milliseconds)
+delay = 1000
+
+# Logger
+[log]
+level = "debug"
+color = "true"
+timestamp = "true"
+
+# Live Reload
+[reload]
+include_ext = ["go"]
