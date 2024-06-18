@@ -9,6 +9,8 @@ import (
 )
 
 // Funções comuns de todos usuarios
+
+// Rota de registro
 func register(c fiber.Ctx) error {
 	var body models.RegisterUserRequest
 

@@ -15,5 +15,6 @@ func main() {
 	app := fiber.New()
 
 	view.InitRoutes(app)
+
 	_ = app.Listen("127.0.0.1:5555")
 }

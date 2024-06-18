@@ -16,5 +16,6 @@ func userRoutes(c fiber.Router) {
 
 	c.Post("/login", login)
 	c.Get("/me", me)
+	// Rotas de admin
 	c.Get("/list", listUsers)
 }

@@ -2,7 +2,6 @@ package util
 
 import (
 	"acervocomics/models"
-	"fmt"
 	"time"
 
 	"github.com/golang-jwt/jwt/v4"
@@ -13,7 +12,7 @@ const secret = "superDUPERSecret"
 func MintToken(user *models.User) (string, error) {
 	// Cria um token JWT
 	claims := jwt.MapClaims{
-		"id":    user.ID               // ID do usuário
+		"id":    user.ID,                                  // ID do usuário
 		"email": user.Email,                               // Email do usuário
 		"admin": user.Admin,                               // Se o usuário é admin
 		"exp":   time.Now().Add(time.Minute * 120).Unix(), // Token expira em 2 horas
